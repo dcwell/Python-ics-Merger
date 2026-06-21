@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ics-merger"
+description = "Merge multiple .ics calendar files into combined, de-duplicated files."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Denali Cornwell", email = "cwell.de@gmail.com" }]
+keywords = ["ics", "icalendar", "calendar", "merge", "google-calendar"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Scheduling",
+]
+dependencies = ["icalendar"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+gui = ["tkinterdnd2"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+ics-merger = "ics_merger.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dcwell/Python-ics-Merger"
+Repository = "https://github.com/dcwell/Python-ics-Merger"
+Issues = "https://github.com/dcwell/Python-ics-Merger/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ics_merger.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
