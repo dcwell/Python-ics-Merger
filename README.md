@@ -39,6 +39,8 @@ python merge_ics.py <directory_path>
 
 ## 📁 Output
 
+
+```text
 my_calendars/
 ├── calendar1.ics
 ├── calendar2.ics
