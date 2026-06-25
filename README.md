@@ -5,6 +5,8 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+Leveraging Copilot with prompt enginnering to make a quick `.ics` merger.
+
 A simple Python tool to merge multiple `.ics` calendar files into one or more combined files — perfect for importing into Google Calendar without duplicates.
 
 I made this because I use a booking system for certain appointments that gave me single `.ics` file downloads rather than connecting to a calendar service directly. In order to bulk import events into Google Calendar (because there is no way to mass drop `.ics` files into GCal at this time...) I had to merge all the files into one, then GCal would do the bulk import.
